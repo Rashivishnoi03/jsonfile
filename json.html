@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON</title>
+</head>
+<body>
+
+<table border="10">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+</table>
+
+<script>
+    
+    var jsonData = [
+        { "name": "ARJUN", "age": 26, "gender": "Male" },
+        { "name": "ARPIT", "age": 22, "gender": "Male" },
+        { "name": "AAROHI", "age": 21, "gender": "Female" },
+        { "name": "RITIK", "age": 25, "gender": "Male" },
+        { "name": "RITIKA", "age": 28, "gender": "Female" },
+        { "name": "SHUBH", "age": 27, "gender": "Male" },
+        { "name": "RAVI", "age": 25, "gender": "Male" },
+        { "name": "RAM", "age": 21, "gender": "Male" },
+        { "name": "ABHAY", "age": 22, "gender": "Male" },
+        { "name": "ARNAV", "age": 28, "gender": "Male" },
+        { "name": "SHWETA", "age": 26, "gender": "Female" },
+        { "name": "PAKHI", "age": 21, "gender": "Female" },
+        { "name": "VIVEK", "age": 23, "gender": "Male" },
+        { "name": "PALLAVI", "age": 27, "gender": "Female" },
+        { "name": "SHAM", "age": 24, "gender": "Male" },
+        { "name": "REETA", "age": 22, "gender": "Female" },
+        { "name": "RAKHI", "age": 23, "gender": "Female" },
+        
+    ];
+
+    
+    var tableBody = document.getElementById("table-body");
+
+    
+    jsonData.forEach(function (entry) {
+        var row = document.createElement("tr");
+        var nameCell = document.createElement("td");
+        nameCell.textContent = entry.name;
+        var ageCell = document.createElement("td");
+        ageCell.textContent = entry.age;
+        var genderCell = document.createElement("td");
+        genderCell.textContent = entry.gender;
+        row.appendChild(nameCell);
+        row.appendChild(ageCell);
+        row.appendChild(genderCell);
+        tableBody.appendChild(row);
+    });
+</script>
+
+
+</body>
+</html>
